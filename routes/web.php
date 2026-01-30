@@ -12,7 +12,7 @@ Route::middleware(['auth', 'verified'])->group(function () {
     // Route Dashboard Utama
     Route::get('/dashboard', [BookingController::class, 'index'])->name('dashboard');
 
-    // Route untuk Admin Input Pesanan (PENTING: Nama harus bookings.store)
+    // Route untuk Admin Input Pesanan
     Route::post('/bookings', [BookingController::class, 'store'])->name('bookings.store');
 
     // Route untuk Approver (Persetujuan)

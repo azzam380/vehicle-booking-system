@@ -13,11 +13,11 @@ return new class extends Migration
     {
         Schema::create('vehicles', function (Blueprint $table) {
             $table->id();
-            $table->string('name'); // Contoh: Toyota Hilux
-            $table->enum('type', ['person', 'goods']); // Angkutan orang/barang
-            $table->enum('ownership', ['company', 'rent']); // Milik/Sewa
+            $table->string('name');
+            $table->enum('type', ['person', 'goods']); 
+            $table->enum('ownership', ['company', 'rent']); 
             $table->string('plate_number');
-            $table->integer('fuel_consumption'); // Liter
+            $table->integer('fuel_consumption'); 
             $table->timestamps();
         });
     }

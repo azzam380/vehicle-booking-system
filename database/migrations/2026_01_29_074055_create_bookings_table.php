@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('bookings', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('user_id')->constrained(); // Admin penginput
+            $table->foreignId('user_id')->constrained();
             $table->foreignId('vehicle_id')->constrained();
             $table->string('driver_name');
             $table->foreignId('approver_1_id')->constrained('users');

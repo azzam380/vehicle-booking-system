@@ -11,11 +11,10 @@ class DatabaseSeeder extends Seeder
 {
     public function run(): void
     {
-        // 1. Akun Admin
         User::create([
             'name' => 'Admin Pool',
             'email' => 'admin@mail.com',
-            'password' => Hash::make('admin123'), // 👈 password baru
+            'password' => Hash::make('admin123'), 
             'role' => 'admin',
         ]);
 
@@ -34,7 +33,6 @@ class DatabaseSeeder extends Seeder
         ]);
 
 
-        // 4. Data Kendaraan Dummy
         Vehicle::create([
             'name' => 'Toyota Hilux 4x4',
             'type' => 'goods',
